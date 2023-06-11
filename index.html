@@ -536,11 +536,13 @@
     </div>
   </div>
     <script>
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evitar el envío del formulario
-    // Limpiar los campos del formulario
-    document.getElementById("contact-form").reset();
-  });
+  function resetForm(event) {
+    event.preventDefault(); // Evita que se envíe el formulario
+    
+    // Restablece los valores de los campos del formulario
+    var form = document.querySelector('form');
+    form.reset();
+  }
 </script>
   <footer>
     <p><font color="#90f50c">Sigueme en mis redes sociales.</font><p>
