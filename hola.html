@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilos para el primer encabezado (header1) */
+  #header1 {
+    background-color: #333;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #header1 img {
+    width: 350px;
+    height: 100px;
+  }
+
+  /* Estilos para el segundo encabezado (header2) */
+  #header2 {
+    background-color: #302e2e;
+    padding: 3px;
+  }
+
+  #header2 nav {
+    text-align: right;
+  }
+
+  #header2 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #header2 nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  #header2 nav ul li a {
+    color: #e9e5e5;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #333;
+  }
+  
+  /* Contenedor de imagen difuminada */
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px) brightness(0.5);
+  }
+
+  .image-container .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+  }
+
+  /* Contenedor de texto e imagen */
+  .text-image-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 0;
+      
+    }
+
+  .text-image-container .text {
+    width: 50%;
+    margin: 15px;
+  }
+
+   .text-image-container img {
+    width: 40%;
+    border-radius: 50%;
+      
+   }
+    
+
+    
+
+    /* Estilos del contenedor de pasatiempos y experiencias */
+    #hobbies {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            background-color: #3c3d3a;
+            
+        }
+        
+        .hobby {
+            flex-basis: 30%;
+            text-align: center;
+            color: #e9e5e5;
+        }
+    /* Contenedor de texto normal y bonito */
+    .text-styling-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 0;
+      background-color: aqua;
+    }
+
+    .text-styling-container .normal-text {
+      width: 50%;
+      margin: 30px;
+    }
+
+    .text-styling-container .fancy-text {
+      width: 40%;
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+      text-shadow: 2px 2px 4px rgba(240, 239, 239, 0.5);
+    }
+
+    /* Contenedor de idiomas */
+    .language-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 0;
+      background-color: #3c3d3a;
+    }
+
+    .language-container .language {
+      width: 48%;
+      text-align: center;
+    }
+    
+    #idioma_section {
+  text-align: center;
+  background-color: #3c3d3a;
+  padding: 10px;
+}
+
+.idioma {
+  margin: 0;
+  padding: 0;
+}
+
+.idioma h1 {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+    
+    
+ /* Contenedor de logos y texto con hover */
+.logo-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  background-color: #95d612;
+}
+
+.logos {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.logos img:hover {
+  transform: rotate(360deg);
+}
+
+.text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hover-text {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+/* Contenedor de educación */
+
+#edu_section {
+  margin: 0;
+  padding: 0;
+  background-color: #90f50c;
+}
+
+#edu_section .idioma {
+  margin: 0;
+  padding: 0;
+}
+
+#edu_section .idioma h1 {
+  margin: 0;
+}
+
+.logo-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0;
+  background-color: #90f50c;
+}
+
+.logos {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Ajustamos la alineación a la derecha */
+}
+
+.logos img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+  margin-bottom: 10px;
+}
+
+.logos img:hover {
+  transform: rotate(360deg);
+}
+
+.text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hover-text {
+  margin-left: 10px;
+}
+
+
+    
+    /* Contenedor de contactos y formulario */
+    .contact-form-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 0;
+      background-color: #90f50c; /* Cambia el valor de color por el que desees */
+    }
+
+    .contact-form-container .contacts {
+      width: 30%;
+      margin: 70px;
+    }
+
+    .contact-form-container .form {
+      width: 30%;
+      margin: 80px;
+    }
+
+    .contact-form-container .form input,
+    .contact-form-container .form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .contact-form-container .form button {
+      padding: 10px 20px;
+      background-color: #106413;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1f1f1d;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      margin: 0%;
+    }
+
+    footer img {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+
+    /* Navegación */
+    header {
+      background-color: #333;
+      padding: 20px;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /*contenedor kira */
+    #kira-container {
+  display: flex;
+  margin: 0px;
+  background-color: #3c3d3a;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.text-container h2 {
+  
+  font-size: 24px;
+  color: #9b9999;
+  margin-bottom: 10px;
+}
+
+.text-container img {
+  width: 500px;
+  height: 350px;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 16px;
+  color: #b4b0b0;
+  margin: 0;
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="header1">
+    <header>
+      <center><img src="espe.png" alt=""></center>
+    </header>
+  </div>
+
+  <div id="header2">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#image-section">Inicio</a></li>
+          <li><a href="#text-image-section">Sobre mi</a></li>
+          <li><a href="#hobbies-section">Pasatiempos</a></li>
+          <li><a href="#text-styling-section">Conocimientos</a></li>
+          <li><a href="#language-section">Idiomas</a></li>
+          <li><a href="#logo-text-section">Formacion educativa</a></li>
+          <li><a href="#contact-form-section">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div id="image-section" class="image-container">
+    <img src="yo.jpg" alt="Imagen de fondo">
+    <div class="image-text">
+      <h1 style="font-size: 80px;"><font face="new roman">Kevin Francisco Quimuña Pilataxi</font></h1>
+      <p style="font-size: 40px;font-weight: bold;"><font color="#90f50c">Estudiante de ingenieria en TI</font><p>
+      <p style="font-size: 40px; font-weight: bold;"><font color="#90f50c">en la universidad de las Fuerzas Armadas ESPE</font><p>
+    </div>
+  </div>
+
+  <div id="text-image-section" class="text-image-container">
+    <div class="text">
+      <h1 style="font-size: 80px;"><font color="green" face="new roman">Un poco sobre mi.</font></h1>
+      <p>Soy un joven estudiante que está interesado en TI y todo lo relacionado a las nuevas
+         tecnologías es por ello que actualmente estudio ingeniería en tecnologías de la información en la Universidad de las Fuerzas Armadas ESPE.  </p>
+      <p>Durante el tiempo que llevo en mi carrera me he interesado mas en las tecnologías, desarrollo, redes y administración de sistemas por lo que uno de mis objetivos es convertirme en un experto en estos campos que ofrece la carrera.
+        <p>¡Cualquier duda no dudes en preguntármela!</p>
+      </p>
+    </div>
+    <img src="L00400502.jpg" alt="Imagen" width="100px" height="450px">
+  </div>
+
+  <div id="hobbies">
+    <div class="hobby">
+        <p style="font-weight: bold;" >Experiencias</p>
+        <img src="estrellaazul.png" alt="Pasatiempo 1" width="75px" height="75px">
+        <p>A lo largo de mi instancia en la universidad he estado involucrado en varios proyectos de 
+          programación y aplicaciones además de DRP a empresas.</p>
+        
+    </div>
+    <div class="hobby">
+        <p style="font-weight: bold;">Estudios <br>certificados</p>
+        <img src="estudios.png" alt="Pasatiempo 2" width="105px" height="105px">
+        <p>Certificado en desarrollo de habilidades blandas</p>
+        <p>Certificado en competencias digitales</p>
+        <p>Certificado en competencias del emprendimiento</p>
+        <p>Certificado Cisco direccionamiento IP</p>
+        <p>Certificado modelo de negocio canva</p>
+        <p>Certificado google</p>
+    </div>
+    <div class="hobby">
+        <p style="font-weight: bold;">Pasatiempos</p>
+        <img src="pasatiempos.png" alt="Pasatiempo 3" width="100px" height="100px">
+        <p>Jugar futból</p>
+        <p>Escuchar música</p>
+        <p>Jugar con mis mascotas</p>
+    </div>
+</div>
+
+  <div id="text-styling-section" class="text-styling-container">
+    <div class="normal-text">
+      <h2>Mis habilidades en el campo de las TI</h2>
+      <p>A lo largo de los años he aprendido varios lenguajes y modelos de programación además de HTML para 
+        maquetar paginas y CSS para los diseños también JS y lenguajes como C++, Java, Python.</p>
+    </div>
+    <div class="fancy-text">
+      <h2>HTML</h2>
+      <H1><center>C++</center></H1>
+      <p>Algunos de mis lenguajes favoritos</p>
+    </div>
+  </div>
+  <div id="idioma_section" class="len-container"> 
+    <div class="idioma">
+   <h1>Idiomas</h1>  
+    </div>
+  </div>
+
+  <div id="language-section" class="language-container">
+    
+    <div class="language">
+      <h2><font color="green" face="new roman">English</font></h2>
+      <p>Avanzado</p>
+    </div>
+    <div class="language">
+      <h2><font color="green" face="new roman">Español</font></h2>
+      <p>Nativo</p>
+    </div>
+    <div class="language">
+      <h2><font color="green" face="new roman">Italiano</font></h2>
+      <p>Intermedio</p>
+    </div>
+  </div>
+
+  <div id="edu_section" class="ed-container"> 
+    <div class="idioma">
+  <center><h1>Educación</h1></center> 
+    </div>
+  </div>
+  
+  <div id="logo-container" class="logo-text-container">
+    <div class="logos">
+      <div class="logo">
+        <img src="amable arauz.png" alt="Logo 1">
+      </div>
+      <div class="logo">
+        <img src="UER.png" alt="Logo 2">
+      </div>
+      <div class="logo">
+        <img src="logoESPE.png" alt="Logo 3">
+      </div>
+    </div>
+    <div class="text">
+      <p>2006-2012 <br> Escuela Amable Araúz</p>
+      <p>2012-2018 <br> Unidad Educativa Rumiñahui</p>
+      <p>2019-2023 <br> Universidad de las Fuerzas Armadas ESPE</p>
+      
+    </div>
+  </div>
+  
+  <div id="kira-container" class="kira-text-cont">
+    <div class="text-container">
+      <center><h2>Mi motivación</h2></center>
+      <center><img src="amor.jpg" alt="kira" width="40%" height="80px"></center>
+      <center><p>Kira.</p></center>
+    </div>
+    <div class="text">
+      <br><br><br><br><br><br><br><br>
+      <p>Ella se llama Kira y es mi mascota, <br>juntos hemos vivido muchas
+        aventuras <br> y es parte fundamental de mi vida.
+      </p>
+    </div>
+  </div>
+
+  <div id="contact-form-section" class="contact-form-container">
+    <div class="contacts">
+      <h2>Contactos</h2>
+      <p>No dudes en contactarme</p>
+      <p>Teléfono: 0981492145</p>
+      <p>Dirección: Conocoto-Quito-Ecuador</p>
+      <p>Email personal: kevin.wwe.1224@gmail.com</p>
+      <p>Email institucional: kfquimuna@espe.edu.ec</p>
+    </div>
+    <div class="form">
+      <h2>Formulario de contacto</h2>
+      <form action="enviar_formulario.php" method="POST">
+        <input type="text" name="Nombre" placeholder="Nombre" required>
+        <input type="text" name="Edad" placeholder="Edad" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea name="Comentario" placeholder="Comentario" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+    
+  <footer>
+    <p><font color="#90f50c">Sigueme en mis redes sociales.</font><p>
+    <a href="https://www.facebook.com/kevin.quimunia/">
+      <img src="fb.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/kevin_quimunia/">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/kevin-quimuña-3762b8271/">
+      <img src="linkeding.png" alt="LinkedIn">
+    </a>
+  </footer>
+</body>
+</html>
