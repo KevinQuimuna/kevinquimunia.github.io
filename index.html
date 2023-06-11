@@ -535,7 +535,13 @@
       </form>
     </div>
   </div>
-    
+    <script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+    // Limpiar los campos del formulario
+    document.getElementById("contact-form").reset();
+  });
+</script>
   <footer>
     <p><font color="#90f50c">Sigueme en mis redes sociales.</font><p>
     <a href="https://www.facebook.com/kevin.quimunia/">
